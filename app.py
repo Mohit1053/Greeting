@@ -54,10 +54,15 @@ from chatterbot.trainers import ListTrainer
 chatbot = ChatBot("ECE Lab")
 trainer = ListTrainer(chatbot)
 
+# open a file "Greeting Bot ECE labs - Sheets1.txt"  in documents
+
 f = open("Greeting Bot ECE labs - Sheet1.txt", "r")
 
 for line in f:
     trainer.train(line.split("!@#$%^&*()"))
+
+f.close()
+
 
 ############################################################
 
